@@ -1,11 +1,11 @@
 const {createApp,ref}  = Vue;
 
-var Gallerydata = createApp({
+var Gameplaydata = createApp({
     data() {
         return{
-            gallery:[
-                {"imgSrc":"play1.png"}
+            Gameplay:[
+                {text:"玩家需要通過不同的關卡，找出相對應的鑰匙，逃出迷宮。",}
             ]
-        }
+        };
     }
-}).mount("#gallery");
+}).mount("#gameplay");

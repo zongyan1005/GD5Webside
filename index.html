@@ -32,14 +32,16 @@
 </section>
 
 <section id="gameplay" class="content-section">
+  <div v-for="item in Gameplay" >
   <h2>遊戲玩法</h2>
-  <div>
-    <p>玩家需要通過不同的關卡，找出相對應的鑰匙，逃出迷宮。</p>
-    <ul>
-      <p>門上會有不同的顏色，玩家需要找出鑰匙拼湊出門上的顏色，開啟門前往下一關。</p>
-      <p>在路上玩家不只要尋找鑰匙，還要躲避鬼魂的攻擊，鬼魂依據關卡的不同速度與數量都會增加。</p>
-      <p>玩家要在生命殆盡前逃出迷宮。</P>
-    </ul>
+    <div>
+      <p> {{item.text}}</p>
+      <ul>
+        <p>門上會有不同的顏色，玩家需要找出鑰匙拼湊出門上的顏色，開啟門前往下一關。</p>
+        <p>在路上玩家不只要尋找鑰匙，還要躲避鬼魂的攻擊，鬼魂依據關卡的不同速度與數量都會增加。</p>
+        <p>玩家要在生命殆盡前逃出迷宮。</P>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -56,18 +58,19 @@
 <section id="gallery" class="content-section">
   <h2>實機畫面</h2>
   <div class="carousel-container">
-    <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel slide" data-bs-ride="carousel">
 
-        <div v-for="item in gallery" class="carousel-item active">
+        <div v-for="item in Gallery" class="carousel-item active ">
           <img :src="'img/'+item.imgSrc" class="d-block w-100" alt="實機畫面 1">
         </div>
         
         <!-- 第一張圖片 -->
-
+<!--
         <div class="carousel-item active">
           <img src="img/play1.png" class="d-block w-100" alt="實機畫面 1">
         </div> 
-  
+      -->
+
         <!-- 第二張圖片 -->
          <!-- 
         <div class="carousel-item">
