@@ -35,11 +35,11 @@
   <div v-for="item in Gameplay" >
   <h2>遊戲玩法</h2>
     <div>
-      <p> {{item.text}}</p>
+      <p> {{item.title}}</p>
       <ul>
-        <p>門上會有不同的顏色，玩家需要找出鑰匙拼湊出門上的顏色，開啟門前往下一關。</p>
-        <p>在路上玩家不只要尋找鑰匙，還要躲避鬼魂的攻擊，鬼魂依據關卡的不同速度與數量都會增加。</p>
-        <p>玩家要在生命殆盡前逃出迷宮。</P>
+        <p>{{item.text1}}</p>
+        <p>{{item.text2}}</p>
+        <p>{{item.text3}}</P>
       </ul>
     </div>
   </div>
@@ -60,9 +60,10 @@
   <div class="carousel-container">
     <div class="carousel slide" data-bs-ride="carousel">
 
-        <div v-for="item in Gallery" class="carousel-item active ">
-          <img :src="'img/'+item.imgSrc" class="d-block w-100" alt="實機畫面 1">
-        </div>
+      <div v-for="(item, index) in Gallery" :class="['carousel-item', { active: index === 0 }]" :key="index">
+        <img :src="'img/' + item.imgSrc" class="d-block w-100" :alt="'實機畫面 ' + (index + 1)">
+      </div>
+      
         
         <!-- 第一張圖片 -->
 <!--
@@ -82,17 +83,17 @@
         <div class="carousel-item">
           <img src="img/play3.png" class="d-block w-100" alt="實機畫面 3">
         </div>
-        -->
-      </div>
-      <!-- 輪播控制按鈕 -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">上一張</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">下一張</span>
-      </button>
+        
+      </div>-->
+  <!-- 輪播控制按鈕 -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">上一張</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">下一張</span>
+  </button>
     </div>
   </div>
 </section>
@@ -102,10 +103,10 @@
   <p>© 2024 顏色迷宮 | 聯絡我們：<a href="mailto:zongyan1005@mail.com" class="text-white">zongyan1005@mail.com</a></p>
 </footer>
 
-<script src="script.js"></script>
-<script src="vue.js"></script>
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue@3.2.47/dist/vue.global.prod.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+<script src="vue.js"></script>
 </body>
 </html>
