@@ -1,0 +1,76 @@
+/* 基本設置 */
+body {
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  background-image: url('img/background.png'); /* 設置背景圖片 */
+  background-size: cover; /* 背景覆蓋整個頁面 */
+  background-attachment: fixed; /* 背景固定 */
+  background-position: center; /* 背景居中 */
+}
+
+.navbar {
+  background-color: #3d3e7f;
+}
+
+.navbar-brand, .nav-link {
+  color: #ffffff !important;
+}
+
+.nav-link:hover {
+  color: #ff5722 !important;
+  text-decoration: underline;
+}
+
+/* 每個區塊占滿一頁 */
+.content-section {
+  min-height: 100vh; /* 每個區塊高度為視窗高度 */
+  display: flex; /* 使用 Flexbox */
+  flex-direction: column; /* 垂直排列 */
+  justify-content: center; /* 垂直置中 */
+  align-items: center; /* 水平置中 */
+  text-align: center; /* 文字置中 */
+  background: rgba(248, 248, 248, 0.8); /* 背景顏色 */
+  padding: 20px;
+}
+
+.carousel-container {
+  width: 100%;
+  max-width: 1200px; /* 可選：限制最大寬度 */
+  margin: 0 auto; /* 中央對齊 */
+}
+
+.carousel-item img {
+  height: 500px; /* 調整圖片高度 */
+  object-fit: cover; /* 圖片填滿容器，維持比例 */
+  border-radius: 8px; /* 添加圓角 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 添加陰影效果 */
+}
+
+/* 標題與段落樣式 */
+.content-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  transition: font-size 0.5s ease; /* 滾動時放大效果 */
+}
+
+.content-section p {
+  font-size: 1rem;
+  transition: font-size 0.5s ease; /* 滾動時放大效果 */
+}
+
+.content-section.visible h2 {
+  font-size: 3rem; /* 滾動到該頁時放大 */
+}
+
+.content-section.visible p {
+  font-size: 1.5rem; /* 段落文字也放大 */
+}
+
+/* 頁尾 */
+.footer {
+  background-color: #1f1f1f;
+  color: rgb(80, 126, 66);
+  text-align: center;
+  padding: 10px 0;
+}
+
