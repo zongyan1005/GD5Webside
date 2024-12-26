@@ -46,25 +46,26 @@
 </section>
 
 <section id="story" class="content-section">
-  <h2>故事背景</h2>
-  <div>
-    <p>在一次冒險之旅中，一位無畏的探險家誤闖入了一座傳說中的「顏色迷宮」。</p>
-    <p>據說這座迷宮由古代色彩之神創造，充滿了炫目的色彩與險惡的機關。但迷宮內不僅是挑戰重重，還隱藏著可怕的鬼魂。</p>
-    <p>探險家必須迅速利用敏捷的反應與智慧，根據迷宮中變化莫測的色彩提示找到正確的出路。</p>
+  <div v-for="item in Story" >
+    <h2>故事背景</h2>
+      <div>
+        <p>{{item.text1}}</p>
+        <p>{{item.text2}}</p>
+        <p>{{item.text3}}</p>
+      </div>
   </div>
 </section>
 
 <!-- 實機畫面 -->
 <section id="gallery" class="content-section">
   <h2>實機畫面</h2>
+  <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-container">
     <div class="carousel slide" data-bs-ride="carousel">
-
       <div v-for="(item, index) in Gallery" :class="['carousel-item', { active: index === 0 }]" :key="index">
         <img :src="'img/' + item.imgSrc" class="d-block w-100" :alt="'實機畫面 ' + (index + 1)">
       </div>
-      
-        
+    </div>
         <!-- 第一張圖片 -->
 <!--
         <div class="carousel-item active">
@@ -86,15 +87,15 @@
         
       </div>-->
   <!-- 輪播控制按鈕 -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">上一張</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">下一張</span>
-  </button>
-    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">上一張</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">下一張</span>
+    </button>
+  </div>
   </div>
 </section>
 

@@ -39,6 +39,7 @@ body {
   margin: 0 auto; /* 中央對齊 */
 }
 
+
 .carousel-item img {
   height: 500px; /* 調整圖片高度 */
   object-fit: cover; /* 圖片填滿容器，維持比例 */
@@ -74,3 +75,17 @@ body {
   padding: 10px 0;
 }
 
+#main {
+  background-image: url("img/gameplayBG.png"); /* 替換為你的背景圖片路徑 */
+  background-size: cover; /* 確保圖片覆蓋整個區塊 */
+  background-position: center; /* 確保圖片居中 */
+  background-repeat: no-repeat; /* 避免圖片重複 */
+  color: #ffffff; /* 根據背景調整文字顏色，確保可讀性 */
+  padding: 60px 20px; /* 內邊距 */
+  text-align: center;
+}
+#main .content-background {
+  background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+  padding: 20px;
+  border-radius: 8px; /* 圓角 */
+}
