@@ -4,88 +4,90 @@ body {
   margin: 0;
   background-image: url('img/background.png'); /* 設置背景圖片 */
   background-size: cover; /* 背景覆蓋整個頁面 */
-  background-attachment: fixed; /* 背景固定 */
+  background-attachment: fixed; /* 背景固定，不隨滾動移動 */
   background-position: center; /* 背景居中 */
 }
 
 .navbar {
-  background-color: #3d3e7f;
+  background-color: #3d3e7f; /* 導航列背景色 */
 }
 
 .navbar-brand, .nav-link {
-  color: #ffffff !important;
+  color: #ffffff !important; /* 導航文字顏色設為白色 */
 }
 
 .nav-link:hover {
-  color: #ff5722 !important;
-  text-decoration: underline;
+  color: #ff5722 !important; /* 滑鼠懸停文字顏色為橘色 */
+  text-decoration: underline; /* 添加底線效果 */
 }
 
 /* 每個區塊占滿一頁 */
 .content-section {
-  min-height: 100vh; /* 每個區塊高度為視窗高度 */
-  display: flex; /* 使用 Flexbox */
-  flex-direction: column; /* 垂直排列 */
+  min-height: 100vh; /* 區塊高度為視窗高度 */
+  display: flex; /* 使用 Flexbox 排版 */
+  flex-direction: column; /* 垂直排列內容 */
   justify-content: center; /* 垂直置中 */
   align-items: center; /* 水平置中 */
   text-align: center; /* 文字置中 */
-  background: rgba(248, 248, 248, 0.8); /* 背景顏色 */
+  background: rgba(248, 248, 248, 0.8); /* 半透明背景色 */
   padding: 20px;
 }
 
+/* 輪播容器 */
 .carousel-container {
   width: 100%;
-  max-width: 1200px; /* 可選：限制最大寬度 */
+  max-width: 1200px; /* 限制最大寬度 */
   margin: 0 auto; /* 中央對齊 */
 }
 
-
 .carousel-item img {
-  height: 500px; /* 調整圖片高度 */
+  height: 500px; /* 圖片高度 */
   object-fit: cover; /* 圖片填滿容器，維持比例 */
-  border-radius: 8px; /* 添加圓角 */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 添加陰影效果 */
+  border-radius: 8px; /* 圓角效果 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 陰影效果 */
 }
 
 /* 標題與段落樣式 */
 .content-section h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  transition: font-size 0.5s ease; /* 滾動時放大效果 */
+  transition: font-size 0.5s ease; /* 滾動時的放大效果 */
 }
 
 .content-section p {
   font-size: 1rem;
-  transition: font-size 0.5s ease; /* 滾動時放大效果 */
+  transition: font-size 0.5s ease; /* 滾動時的放大效果 */
 }
 
 .content-section.visible h2 {
-  font-size: 3rem; /* 滾動到該頁時放大 */
+  font-size: 3rem; /* 滾動到該頁時標題放大 */
 }
 
 .content-section.visible p {
-  font-size: 1.5rem; /* 段落文字也放大 */
+  font-size: 1.5rem; /* 滾動到該頁時段落放大 */
 }
 
-/* 頁尾 */
+/* 頁尾樣式 */
 .footer {
-  background-color: #1f1f1f;
-  color: rgb(80, 126, 66);
-  text-align: center;
-  padding: 10px 0;
+  background-color: #1f1f1f; /* 頁尾背景色 */
+  color: rgb(80, 126, 66); /* 頁尾文字顏色 */
+  text-align: center; /* 文字置中 */
+  padding: 10px 0; /* 頁尾內邊距 */
 }
 
+/* 主頁區塊樣式 */
 #main {
-  background-image: url("img/gameplayBG.png"); /* 替換為你的背景圖片路徑 */
-  background-size: cover; /* 確保圖片覆蓋整個區塊 */
-  background-position: center; /* 確保圖片居中 */
-  background-repeat: no-repeat; /* 避免圖片重複 */
-  color: #ffffff; /* 根據背景調整文字顏色，確保可讀性 */
+  background-image: url("img/gameplayBG.png"); /* 替換為背景圖片 */
+  background-size: cover; /* 背景圖片覆蓋整個區塊 */
+  background-position: center; /* 背景居中 */
+  background-repeat: no-repeat; /* 禁止背景重複 */
+  color: #ffffff; /* 調整文字顏色，確保對比 */
   padding: 60px 20px; /* 內邊距 */
-  text-align: center;
+  text-align: center; /* 文字置中 */
 }
+
 #main .content-background {
   background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
   padding: 20px;
-  border-radius: 8px; /* 圓角 */
+  border-radius: 8px; /* 圓角背景 */
 }

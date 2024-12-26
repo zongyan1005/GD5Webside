@@ -36,7 +36,7 @@ var Galleryplaydata = createApp({
             Gallery:[
                 {imgSrc:"play1.png"},
                 {imgSrc:"play2.png"},
-                {imgSrc:"play2.png"}
+                {imgSrc:"play3.png"}
             ]
         };
     }
