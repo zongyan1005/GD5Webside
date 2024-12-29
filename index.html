@@ -33,26 +33,32 @@
 
 <section id="gameplay" class="content-section">
   <div v-for="item in Gameplay" >
-  <h2>遊戲玩法</h2>
-    <div>
-      <p> {{item.title}}</p>
-      <ul>
-        <p>{{item.text1}}</p>
-        <p>{{item.text2}}</p>
-        <p>{{item.text3}}</P>
-      </ul>
-    </div>
+    <h2>遊戲玩法</h2>
+      <div class="gameplay-content">
+        <img src="img/contorller.png" alt="遊戲玩法" class="gameplay-image">
+        <div>
+        <p> {{item.title}}</p>
+        <ul>
+          <p>{{item.text1}}</p>
+          <p>{{item.text2}}</p>
+          <p>{{item.text3}}</P>
+        </ul>
+        </div>
+      </div>
   </div>
 </section>
 
 <section id="story" class="content-section">
   <div v-for="item in Story" >
     <h2>故事背景</h2>
+    <div class="story-content">
       <div>
         <p>{{item.text1}}</p>
         <p>{{item.text2}}</p>
         <p>{{item.text3}}</p>
       </div>
+      <img src="img/book.png" alt="故事背景" class="story-image">
+    </div>
   </div>
 </section>
 
