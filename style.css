@@ -2,122 +2,178 @@
 body {
   font-family: 'Courier New', Courier, monospace;
   margin: 0;
-  background-image: url('img/background.png'); /* 設置背景圖片 */
-  background-size: cover; /* 背景覆蓋整個頁面 */
-  background-attachment: fixed; /* 背景固定，不隨滾動移動 */
-  background-position: center; /* 背景居中 */
+  background-image: url('img/background.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 .navbar {
-  background-color: #3d3e7f; /* 導航列背景色 */
+  background-color: #3d3e7f;
 }
 
 .navbar-brand, .nav-link {
-  color: #ffffff !important; /* 導航文字顏色設為白色 */
+  color: #ffffff !important;
 }
 
 .nav-link:hover {
-  color: #ff5722 !important; /* 滑鼠懸停文字顏色為橘色 */
-  text-decoration: underline; /* 添加底線效果 */
+  color: #ff5722 !important;
+  text-decoration: underline;
 }
 
 /* 每個區塊占滿一頁 */
 .content-section {
-  min-height: 100vh; /* 區塊高度為視窗高度 */
-  display: flex; /* 使用 Flexbox 排版 */
-  flex-direction: column; /* 垂直排列內容 */
-  justify-content: center; /* 垂直置中 */
-  align-items: center; /* 水平置中 */
-  text-align: left; /* 文字置中 */
-  background: rgba(248, 248, 248, 0.8); /* 半透明背景色 */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  background: rgba(248, 248, 248, 0.8);
   padding: 20px;
 }
 
 /* 輪播容器 */
 .carousel-container {
   width: 100%;
-  max-width: 1200px; /* 限制最大寬度 */
-  margin: 0 auto; /* 中央對齊 */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .carousel-item img {
-  height: 500px; /* 圖片高度 */
-  object-fit: cover; /* 圖片填滿容器，維持比例 */
-  border-radius: 8px; /* 圓角效果 */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 陰影效果 */
+  height: 500px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* 標題與段落樣式 */
 .content-section h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  transition: font-size 0.5s ease; /* 滾動時的放大效果 */
+  transition: font-size 0.5s ease;
 }
 
 .content-section p {
   font-size: 1rem;
-  transition: font-size 0.5s ease; /* 滾動時的放大效果 */
+  transition: font-size 0.5s ease;
 }
 
 .content-section.visible h2 {
-  font-size: 5rem; /* 滾動到該頁時標題放大 */
+  font-size: 5rem;
 }
 
 .content-section.visible p {
-  font-size: 1.5rem; /* 滾動到該頁時段落放大 */
+  font-size: 1.5rem;
 }
 
 /* 頁尾樣式 */
 .footer {
-  background-color: #1f1f1f; /* 頁尾背景色 */
-  color: rgb(80, 126, 66); /* 頁尾文字顏色 */
-  text-align: center; /* 文字置中 */
-  padding: 10px 0; /* 頁尾內邊距 */
+  background-color: #1f1f1f;
+  color: rgb(80, 126, 66);
+  text-align: center;
+  padding: 10px 0;
 }
 
 /* 主頁區塊樣式 */
 #main {
-  background-image: url("img/gameplayBG.png"); /* 替換為背景圖片 */
-  background-size: cover; /* 背景圖片覆蓋整個區塊 */
-  background-position: center; /* 背景居中 */
-  background-repeat: no-repeat; /* 禁止背景重複 */
-  color: #ffffff; /* 調整文字顏色，確保對比 */
-  padding: 60px 20px; /* 內邊距 */
-  text-align: center; /* 文字置中 */
+  background-image: url("img/gameplayBG.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
 }
 
 #main .content-background {
-  background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 20px;
-  border-radius: 8px; /* 圓角背景 */
+  border-radius: 8px;
 }
 
 .gameplay-content, .story-content {
   display: flex;
-  align-items: center; /* 垂直置左 */
-  justify-content: space-between; /* 水平分佈 */
-  gap: 20px; /* 元素間距 */
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .gameplay-image, .story-image {
-  width: 40%; /* 圖片寬度占容器40% */
-  max-width: 400px; /* 限制圖片最大寬度 */
-  opacity: 0; /* 初始透明 */
-  transform: translateX(100%); /* 初始位置在視窗外 */
-  transition: transform 1s ease, opacity 1s ease; /* 添加過渡動畫 */
+  width: 40%;
+  max-width: 400px;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform 1s ease, opacity 1s ease;
 }
 
 .story-image {
-  transform: translateX(-100%); /* 初始位置從左側移入 */
+  transform: translateX(-100%);
 }
 
 /* 當圖片進入可視區域時觸發動畫 */
 .content-section.visible .gameplay-image {
-  transform: translateX(0); /* 移到最終位置 */
-  opacity: 1; /* 顯示圖片 */
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .content-section.visible .story-image {
-  transform: translateX(0); /* 移到最終位置 */
-  opacity: 1; /* 顯示圖片 */
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* 響應式設計 */
+@media (max-width: 1024px) {
+  .gameplay-content, .story-content {
+    flex-direction: column; /* 垂直排列內容 */
+  }
+
+  .gameplay-image, .story-image {
+    width: 100%; /* 圖片寬度調整為容器寬度 */
+    max-width: 100%; /* 移除最大寬度限制 */
+  }
+
+  .content-section h2 {
+    font-size: 3rem; /* 調整標題大小 */
+  }
+
+  .content-section p {
+    font-size: 1.2rem; /* 調整段落文字大小 */
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px; /* 減少導覽列的內邊距 */
+  }
+
+  .content-section h2 {
+    font-size: 2.5rem;
+  }
+
+  .content-section p {
+    font-size: 1rem;
+  }
+
+  .carousel-item img {
+    height: 300px; /* 調整圖片高度 */
+  }
+}
+
+@media (max-width: 480px) {
+  #main {
+    padding: 30px 10px; /* 減少內邊距 */
+  }
+
+  #main .content-background {
+    padding: 15px;
+  }
+
+  .content-section h2 {
+    font-size: 2rem;
+  }
+
+  .content-section p {
+    font-size: 0.9rem;
+  }
 }
