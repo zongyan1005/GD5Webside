@@ -6,6 +6,8 @@
   <title>顏色迷宮</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> 
   <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
 
@@ -35,7 +37,7 @@
   <div v-for="item in Gameplay" >
     <h2>遊戲玩法</h2>
       <div class="gameplay-content">
-        <img src="img/contorller.png" alt="遊戲玩法" class="gameplay-image">
+        <img src="/img/contorller.png" alt="遊戲玩法" class="gameplay-image">
         <div>
         <p> {{item.title}}</p>
         <ul>
@@ -69,7 +71,7 @@
   <div class="carousel-container">
     <div class="carousel slide" data-bs-ride="carousel">
       <div v-for="(item, index) in Gallery" :class="['carousel-item', { active: index === 0 }]" :key="index">
-        <img :src="'img/' + item.imgSrc" class="d-block w-100" :alt="'實機畫面 ' + (index + 1)">
+        <img :src="'/img/' + item.imgSrc" class="d-block w-100" :alt="'實機畫面 ' + (index + 1)">
       </div>
     </div>
         <!-- 第一張圖片 -->
@@ -114,6 +116,6 @@
 <script src="https://cdn.jsdelivr.net/npm/vue@3.2.47/dist/vue.global.prod.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="script.js"></script>
-<script src="vue.js"></script>
+<script src="bs5vue.js"></script>
 </body>
 </html>
