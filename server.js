@@ -82,5 +82,5 @@ server.listen(80, ()=>{
     console.log("Server is running at port 80.");
 })
 server.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '/index.html'));
+    res.sendFile(path.join(__dirname, 'yan/index.html'));
 });
